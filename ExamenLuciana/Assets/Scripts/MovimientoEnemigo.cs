@@ -30,6 +30,7 @@ public class MovimientoEnemigo : MonoBehaviour {
 			au.Play(); //reproducimos el sonido
 			Debug.Log ("sueno");
 			Destroy(objeto.gameObject);
+			Application.LoadLevel("menu");
 		
 		}
 	}
