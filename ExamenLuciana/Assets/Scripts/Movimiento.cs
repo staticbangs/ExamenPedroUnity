@@ -6,6 +6,7 @@ public class Movimiento : MonoBehaviour {
 	Rigidbody2D rg; 
 	public int velocidad = 10;
 
+
 	// Use this for initialization
 	void Start () {
 	

@@ -5,6 +5,7 @@ public class MovimientoEnemigo : MonoBehaviour {
 
 	Rigidbody2D rg; //rigidbody del objeto
 	public int Velocidad; //Velocidad con la que se moveran los enemigos
+	public GameObject explosion; //animacion que usaremos para cuando explote
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,8 @@ public class MovimientoEnemigo : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D objeto){
 	if(objeto.transform.tag == "Player"){
+			GameObject ex = (GameObject)Instantiate(explosion, objeto.transform.position, objeto.transform.rotation);
+			Destroy(ex,0.9f);
 			Destroy(objeto.gameObject);
 		
 		}
